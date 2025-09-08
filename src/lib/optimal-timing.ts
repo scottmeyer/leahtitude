@@ -221,7 +221,7 @@ export const calculateOptimalTiming = async (
   
   // Critical timing recommendations based on solar activity
   if (solarActivity.lifespanImpact < -5) {
-    recommendations.push('⚠️ CRITICAL: Consider delaying conception by 12-18 months - peak solar maximum detected with significant lifespan impact (-' + Math.abs(solarActivity.lifespanImpact.toFixed(1)) + ' years)');
+    recommendations.push('⚠️ CRITICAL: Consider delaying conception by 12-18 months - peak solar maximum detected with significant lifespan impact (-' + Math.abs(solarActivity.lifespanImpact).toFixed(1) + ' years)');
   } else if (solarActivity.lifespanImpact < -3) {
     recommendations.push('Consider delaying conception by 6-12 months to avoid peak solar activity (current impact: ' + solarActivity.lifespanImpact.toFixed(1) + ' years)');
   } else if (solarActivity.lifespanImpact > 2) {

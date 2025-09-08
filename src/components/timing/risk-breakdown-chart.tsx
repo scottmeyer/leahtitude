@@ -81,7 +81,7 @@ export function RiskBreakdownChart({
     }
   ];
 
-  const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: { name: string; impact: number; severity: string; description: string } }>; label?: string }) => {
+  const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: { name: string; impact: number; severity: string; positive: boolean; category: string } }>; label?: string }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
@@ -99,7 +99,7 @@ export function RiskBreakdownChart({
     return null;
   };
 
-  const PieTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: { name: string; value: number; fill: string } }> }) => {
+  const PieTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: { name: string; value: number; fill: string; score: number } }> }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
