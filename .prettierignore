@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+.cache/
+public/
+*.min.js
+*.min.css
+.env*
+*.log
